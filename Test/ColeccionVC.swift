@@ -93,18 +93,20 @@ class ColeccionVC: UICollectionViewController {
                 headerView.backgroundColor = UIColor.whiteColor()
                 return headerView
             default:
-                assert(false, "Unexpected element kind")
+                assert(false, "Elemento no esperado")
             }
     }
 
     
 }
 
+// En los resources de apple
 // Custom Layouts: A Worked Example en los recursos puede ejecutar los pasos que indica
 
 extension ColeccionVC : UITextFieldDelegate {
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        // 1
+        
+        // Con el valor de input se realizaría una búsqueda
         let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
         textField.addSubview(activityIndicator)
         activityIndicator.frame = textField.bounds
@@ -118,7 +120,7 @@ extension ColeccionVC : UITextFieldDelegate {
 }
 
 extension ColeccionVC : UICollectionViewDelegateFlowLayout {
-    //1
+    
     // is responsible for telling the layout the size of a given cell
     func collectionView(collectionView: UICollectionView,
         layout collectionViewLayout: UICollectionViewLayout,
@@ -127,7 +129,7 @@ extension ColeccionVC : UICollectionViewDelegateFlowLayout {
             return CGSize(width: 100, height: 100)
     }
     
-    //3
+    
     //  returns the spacing between the cells, headers, and footers. A constant is used to store the value.
     func collectionView(collectionView: UICollectionView,
         layout collectionViewLayout: UICollectionViewLayout,
