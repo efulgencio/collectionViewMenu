@@ -8,6 +8,8 @@
 
 import UIKit
 
+let themeColor = UIColor(red: 0.01, green: 0.41, blue: 0.22, alpha: 1.0)
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+         window?.tintColor = themeColor
+        
         return true
     }
 
@@ -43,4 +47,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
+
+/*
+You’re by no means limited to stacks and grids, because collection views are extremely customizable. You can use them to make circle layouts, cover-flow style layouts, Pulse news style layouts – almost anything you can dream up!
+
+
+
+UICollectionView – the main view in which the content is displayed, similar to a UITableView. Like a table view, a collection view is a UIScrollView subclass.
+
+UICollectionViewCell – similar to a UITableViewCell in a table view. These cells make up the content of the view and are added as subviews to the colleciton view. Cells can be created programmatically or inside Interface Builder.
+
+Supplementary Views – if you have extra information you need to display that shouldn’t be in the cells but still somewhere within the collection view, you should use supplementary views. These are commonly used for headers or footers.
+
+In addition to the above visual components, a collection view has a layout object which is responsible for the size, position and several other attributes of the content. Layout objects are subclasses of UICollectionViewLayout. Layouts can be swapped out during runtime and the collection view can even automatically animate switching from one layout to another!
+
+
+
+*/
 
